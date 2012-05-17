@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: StayPress Booking Plugin Widgets
-Version: 1.2
-Plugin URI: http://staypress.com
+Version: 1.3
+Plugin URI: http://staypress.org
 Description: StayPress Booking Widgets
-Author:
-Author URI: http://staypress.com
+Author: StayPress team
+Author URI: http://staypress.org
 
-Copyright 2010  (email: barry@mapinated.com)
+Copyright 2012  (email: support@staypress.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
