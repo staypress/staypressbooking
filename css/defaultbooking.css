@@ -1,0 +1,1096 @@
+/* @override http://dev.site/wp-content/plugins/sp_booking/css/defaultbooking.css?ver=2 */
+
+div.wrap {
+	overflow: hidden;
+}
+
+div.innerwrap {
+	float: left;
+	width: 600px;
+	overflow: hidden;
+	min-height: 650px;
+}
+
+div.innerwrap h2 {
+	float: left;
+	width: 580px;
+	border: 1px solid #e3e3e3;
+	margin-top: 10px;
+	border-bottom-style: none;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background: #DFDFDF url(../images/gray-grad.png) repeat-x scroll left top;
+	padding: 6px 10px 6px 5px;
+	line-height: 15px;
+}
+
+a.addbutton {
+	float: right;
+	font: normal bold 11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	margin-top: 1px;
+	padding: 0;
+	margin: 0;
+}
+
+#pagination {
+	float: right;
+	font: normal bold 11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	margin-top: 1px;	
+}
+
+#pagination .page-numbers {
+	font: normal bold 11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;	
+	border: 1px solid transparent;
+	padding: 3px 7px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#pagination span.page-numbers.current {
+	border: 1px solid #ccc;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	background: #f1f1f1;
+}
+
+#pagination span.page-numbers.dots {
+	padding: 3px 0px;
+}
+
+div.rightwrap {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+h2.rightbarheading, h2.searchformheading, h2.filterformheading {
+	width: 225px;
+	border: 1px solid #e3e3e3;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom-style: none;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background: #DFDFDF url(../images/gray-grad.png) repeat-x scroll left top;
+	padding: 6px 15px 6px 10px;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+h2.rightbarheading.shrunk {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+
+div.innersidebarbox {
+	padding: 7px 10px 15px;
+	width: 230px;
+	border: 1px solid #e3e3e3;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	background: #fff;
+}
+
+div.innersidebarbox.shrunk {
+	display: none;
+}
+
+div.innerwrap h2 a {
+	font: normal normal 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	border: 1px solid transparent;
+	padding: 3px 7px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+div.innerwrap h2 a:hover {
+	border: 1px solid transparent;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	background: #f1f1f1;
+}
+
+div.innerwrap h2 a.selected {
+	font-weight: bold;
+}
+
+div.bookinginnercontainer, div.wrapcontents {
+	float: left;
+	width: 575px;
+	padding: 10px;
+	background: #ffffff;
+	border: 1px solid #e3e3e3;
+	margin-bottom: 10px;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+#innermenu {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px;
+	overflow: hidden;
+	background-color: #efefef;
+	height: 23px;
+	margin-bottom: 0;
+	padding: 2px 5px 5px;
+}
+
+#innermenu li {
+	float: left;
+	height: 25px;
+}
+
+#innermenu li.firstleft {
+	border-right: 1px dotted #d5d5d5;
+	margin-right: 5px;
+	padding-right: 5px;
+}
+
+#innermenu li.firstright {
+	border-left: 1px dotted #d5d5d5;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+#innermenu li a {
+	font: normal normal 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	border: 1px solid transparent;
+	padding: 3px 7px;
+	display: block;
+	margin-top: 0;
+	margin-right: 2px;
+	margin-bottom: 3px;
+}
+
+#innermenu li a.selected {
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	border: 1px solid transparent;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	background: #b6b6b6;
+	color: #fff;
+	text-shadow: #000000 0px 1px 0px;
+}
+
+#innermenu li a:hover {
+	border: 1px solid transparent;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	background: #d5d5d5;
+}
+
+.appmenu {
+	overflow: hidden;
+}
+
+#innermenu li.leftmenu {
+	float: left;
+}
+
+#innermenu li.rightmenu {
+	float: right;
+}
+
+div.clear {
+	clear: both;
+}
+
+input.narrow, select.narrow {
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+input.wide, textarea.wide {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+textarea.short {
+	min-height: 120px;
+}
+
+#media-buttons {
+	padding-left: 0;
+}
+
+div.highlightbox.blue {
+	width: 100%;
+	min-height: 100px;
+	background-color: #f1f5fa;
+	border: 1px solid #c0d1ec;
+}
+
+div.highlightbox p {
+	margin: 10px;
+}
+
+div.highlightbox.yellow {
+	width: 100%;
+	min-height: 100px;
+	background-color: #ffc;
+	border: 1px solid #fc6;
+	padding-top: 5px;
+}
+
+div.sidebarbox {
+	
+}
+
+div.handlediv {
+	float:right;
+	height:28px;
+	width:23px;
+}
+
+div.sidebarbox:hover div.handlediv {
+	background: url("../images/menu-bits.gif") no-repeat scroll left -111px transparent;
+}
+
+div.wrapcontents h3 {
+	background-color: #edf3fe;
+	text-shadow: 0 1px 0 #FFFFFF;
+	color: #000;
+	font: normal bold 12px/2.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-left: 10px;
+}
+
+/* @group inner booking */
+
+div.bookinginnercontainer h3 {
+	background-color: #edf3fe;
+	text-shadow: 0 1px 0 #FFFFFF;
+	color: #000;
+	font: normal bold 12px/2.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding-left: 10px;
+	margin: 10px -10px;
+}
+
+select.datefield {
+	display: inline;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+input.hiddendatefield {
+	visibility: hidden;
+	width: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+img.ui-datepicker-trigger {
+	vertical-align: middle;
+}
+
+div.bookinginnercontainer div.bookinglistinner {
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+div.bookinginnercontainer div.bookinglistinner div.booking {
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+div.bookinginnercontainer div.bookinglistinner div.booking.topline {
+	padding-top: 10px;
+	border-top: 1px solid #e3e3e3;
+}
+
+div.bookinginnercontainer h3.departuresheader {
+	background-color: #ffd6d6;
+}
+
+div.bookinginnercontainer h3.occupiedheader {
+	background-color: #d3fdd7;
+}
+
+div.date {
+	overflow: hidden;
+	width: 70px;
+	min-height: 80px;
+	margin-right: 10px;
+	border: 1px solid #bbb;
+}
+
+div.date.left {
+	float: left;
+}
+
+div.date.right {
+	float: right;
+}
+
+div.topdate span.dayofweek {
+	display: block;
+	font: bold 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #bbb;
+}
+
+div.topdate span.dayofweek.smaller {
+	display: block;
+	font: bold 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid #bbb;
+}
+
+div.topdate span.day {
+	display: block;
+	font: bold 35px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	overflow: hidden;
+	height: 40px;
+	background: #fff;
+	color: #424242;
+	text-shadow: #eee 1px 1px 0px;
+	padding-bottom: 3px;
+}
+
+div.bottomdate span.day {
+	display: none;
+	font: bold 40px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	overflow: hidden;
+	height: 25px;
+	margin-top: -45px;
+	background: #fff;
+}
+
+
+span.month {
+	display: block;
+	font: bold 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 1px solid #bbb;
+}
+
+span.year {
+	display: block;
+	font: bold 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+div.departure.date div.topdate span.dayofweek {
+	background-color: #ffe7e7;
+}
+
+div.departure.date div.bottomdate span.month {
+	background-color: #ffe7e7;
+}
+
+div.departure.date div.bottomdate span.year {
+	background-color: #ffe7e7;
+}
+
+div.arrival.date div.topdate span.dayofweek {
+	background-color: #d9edfe;
+}
+
+div.arrival.date div.bottomdate span.month {
+	background-color: #d9edfe;
+}
+
+div.arrival.date div.bottomdate span.year {
+	background-color: #d9edfe;
+}
+
+div.details {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	min-height: 80px;
+	width: 490px;
+}
+
+div.occupied div.details {
+	width: 400px;
+}
+
+div.booking div.details p {
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 1px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+p.bookingtitle {
+	font: bold 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 5px !Important;
+}
+
+p.bookingtitle a{
+	color: #333;
+	text-decoration: none;
+}
+
+p.bookingtitle a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+
+div.details div.linkmeta {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	visibility: hidden;
+}
+
+div.details:hover div.linkmeta {
+	visibility: visible;
+}
+
+span.propertytitle {
+	font-weight: bold;
+	min-width: 70px;
+}
+span.contacttitle {
+	font-weight: bold;
+	min-width: 70px;
+}
+
+span.arrivaltitle {
+	font-weight: bold;
+	min-width: 70px;
+}
+
+span.departuretitle {
+	font-weight: bold;
+	min-width: 70px;
+}
+
+span.status {
+	display: inline-block;
+	overflow: hidden;
+	margin-left: 10px;
+	font: normal 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-top: 2px;
+}
+
+span.status.paid {
+	color: #00822e;
+}
+
+span.status.pending {
+	color: #fb9200;
+}
+
+span.status.deposit {
+	color: #007db6;
+}
+
+span.status.reserved {
+color: #62abab;
+}
+
+span.status.cancelled {
+	color: #ff2725;
+}
+
+span.status.trash {
+	color: #000;
+}
+
+div.bookingmeta {
+	clear: both;
+	color: #666;
+	overflow: hidden;
+	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-top: 10px;
+	background-color: #f6f6f6;
+	padding: 5px 5px 5px 5px;
+	margin-right: 10px;
+}
+
+div.bookinglinks {
+	overflow: hidden;
+	float: right;
+}
+
+div.bookinguser {
+	overflow: hidden;
+	float: left;	
+}
+
+#editaddbookingform label.main {
+	display: block;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#editaddbookingform input.main, #editaddpropertyforminner textarea.main, #editaddpropertyforminner select.main {
+	display: block;
+}
+
+input.narrow, select.narrow {
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.errorfield {
+	background: transparent url(../images/exclamation.png) no-repeat right center;
+	border-color: #e86958 !Important;
+}
+
+input.wide, textarea.wide, select.wide {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+textarea.short {
+	min-height: 120px;
+}
+
+.ui-datepicker {
+	font-size: .8em !Important;
+}
+
+select.lefttimefield {
+	margin-left: 30px;
+}
+
+select.timefield {
+	margin-right: 5px;
+}
+
+.ui-datepicker table th, .ui-datepicker table td {
+	font-size: 1.2em !Important;
+}
+
+#upmessage {
+	background-color: #ffffe0;
+	border: 1px solid #e6db55;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius:6px;
+	overflow: hidden;
+	padding: 7px 10px;
+}
+
+#upmessage.errormessage {
+	border-color: #d74746;
+	background-color: #ffd6d6;
+}
+
+a#closemessage {
+	float: right;
+}
+#upmessage p {
+	margin: 0;
+}
+
+#screen-meta-links {
+	display: none;
+}
+
+/* @end */
+
+/* @group no bookings found message */
+#bookinglist div.notfound {
+	margin-top: 10px;
+	background-color: #fefcaf;
+	border: 1px solid #ffd381;
+	padding: 10px;
+}
+
+
+/* @end */
+
+/* @group blank slate message */
+
+
+
+#bookinglist.blankslate {
+	color: #797979;
+}
+
+#bookinglist.blankslate p {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+
+
+#bookinglist p span {
+	display: block;
+	float: left;
+	padding-top: 1px;
+}
+
+#bookinglist.blankslate p.nodatalist {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#bookinglist p.nodatalist a {
+	text-decoration: none;
+}
+
+#bookinglist p span.completed {
+	text-decoration: line-through;
+}
+
+#bookinglist p span.nodatanumber {
+	display: block;
+	float: left;
+	padding: 5px 9px;
+	background: #eaf0fb;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	font-weight: bold;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	border: 2px solid #78aad3;
+	margin-right: 10px;
+	margin-left: 20px;
+	width: 9px;
+}
+
+/* @end */
+
+/* @group Sidebar */
+
+#bookingsearch {
+	margin-top: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#editaddbookingform div.statuslabel {
+	margin-left: 5px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	clear: both;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#editaddbookingform div.statuslabel select {
+	margin-left: 30px;	
+}
+
+#editaddbookingform input.button {
+	margin-top: 10px;
+}
+
+#editaddbookingform a.cancellink {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #555555;
+}
+
+#editaddbookingform div.statuslabel span.status {
+	margin-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#editaddbookingform div.statuslabel span.status:hover {
+	background: #FFF;
+}
+
+#editaddbookingform div.statuslabel a.status {
+	color: #000;
+	margin-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.statusbuttons {
+	padding-top: 10px;
+	border-top: 1px solid #e3e3e3;
+	margin: 20px -10px -10px;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+
+div.statusbuttons input.button-primary, div.statusbuttons input.button {
+	float: right;	
+	margin-right: 10px;
+	margin-top: 0 !Important;
+}
+
+div.statusbuttons a.cancellink {
+	float: right;
+	font-size: 10px;
+	margin-right: 10px;
+	padding-top: 3px;	
+}
+
+div.propertystatus {
+	position: absolute;
+	top: 6px;
+	left: 1px;
+	width: 135px;
+	background-color: #ffffff;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	-webkit-box-shadow: 0px 2px 5px #666;
+	-moz-box-shadow: 0px 2px 5px #666;
+	opacity: 0.75;
+}
+
+div.sidebarbox label.main {
+	display: block;
+	margin-bottom: 5px;	
+}
+
+div.sidebarbox .wide {
+	width: 95%;	
+}
+
+textarea#quicknotearea {
+	width: 100%;
+	min-height: 150px;	
+}
+
+#quicknoteaddbutton {
+	float: right;
+}
+
+textarea#quickpaymentarea {
+	width: 100%;
+	min-height: 50px;	
+}
+
+input#quickpaymentamount {
+	float: right;
+	width: 50%;
+}
+
+select#quickpaymentcurrency {
+	float: right;
+	width: 50%;
+}
+
+#quickpaymentaddbutton {
+	float: right;
+}
+
+input.pricingamount {
+	float: right;
+	width: 70px;
+	margin-right: 5px;	
+	text-align: right;
+}
+
+select.pricingcurrency {
+	float: right;
+	width: 70px;
+	margin-left: 0 !Important;
+}
+
+#editaddbookingform div.pricingbox div.innersidebarbox div.statuslabel {
+	margin-left: 0;
+	padding: 3px 5px;
+	overflow: hidden;
+}
+
+#editaddbookingform div.pricingbox div.innersidebarbox div.statuslabel span {
+	display: inline-block;
+	float: left;
+	margin-top: 3px;
+}
+
+#editaddbookingform div.pricingbox div.innersidebarbox div.totalrow {
+	padding-top: 10px;
+	border-top: 1px solid #e3e3e3;
+}
+
+#editaddbookingform div.pricingbox div.innersidebarbox div.totalrow span {
+	font-weight: bold;
+}
+
+
+
+div.pricesrow, div.taxesrow {
+	background-color: #fefdd6;
+}
+
+/* @end */
+
+/* @group Notes */
+
+#fullbookingnotearea {
+	width: 100%;
+	min-height: 5em;
+}
+
+div.additionalnoteinfo.paymentinfo {
+	margin-top: 10px;
+}
+
+input#fullpaymentamount {
+	width: 7em;
+}
+
+tr.bookingnotenote {
+	
+}
+
+tr.bookingnotepayment {
+	background-color: #d3fcaf;
+}
+
+tr.bookingnotereminder {
+	background-color: #fefdd8;
+}
+
+.bookingnote th {
+	width: 30px;
+	vertical-align: top;
+}
+
+tr.bookingnote td {
+	vertical-align: top;
+}
+
+tr.bookingnote td h6 {
+	margin-top: 2px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+#bookingnotesinner table.widefat {
+	margin-top: 5px;
+}
+
+#bookingnotesinner table.widefat tbody tr.bookingnote.bookingnotenote th {
+	
+}
+
+#bookingnotesinner table.widefat tbody tr.bookingnote td h6 span {
+	font-weight: normal;
+}
+
+#bookingnotesinner div.alignleft.actions {
+	margin-bottom: 0;
+}
+
+#bookingnotesinner .noteboxrow {
+	padding: 10px;
+}
+
+
+/* @end */
+
+
+
+/* @group Calendar */
+
+div.month {
+	border: 1px solid #ddd;
+	overflow: hidden;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	width: 225px;
+	margin-bottom: 10px;
+}
+
+div.month h4.monthname {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom-style: none;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background: #DFDFDF url(../images/gray-grad.png) repeat-x scroll left top;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	text-align: center;
+	padding: 6px 5px;
+	overflow: hidden;
+}
+
+div.month h4.monthname span.name {
+
+}
+
+div.month h4.monthname a.previousmonth {
+	float: left;
+	display: block;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+	background: url(../images/left.png) no-repeat;
+}
+
+div.month h4.monthname a.nextmonth {
+	float: right;
+	display: block;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+	background: url(../images/right.png) no-repeat;
+}
+
+li.weekheadings {
+	display: block;
+	margin: 0;
+}
+
+li.weekheadings ul.dow {
+	width: 215px;
+	background: #efefef;
+	overflow: hidden;
+	display: block;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	min-height: 25px;
+}
+
+li.weekheadings ul.dow li {
+	text-align: center;
+	width: 30px;
+	min-height: 15px;
+	padding-top: 3px;
+	display: inline-block;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	margin: 0;
+}
+
+div.month ul.monthdetails {
+	margin-bottom: 5px;
+}
+
+div.month ul.monthdetails li.weekrow ul {
+	width: 215px;
+	background: #fff;
+	overflow: hidden;
+	display: block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.month ul.monthdetails li.weekrow {
+	border-top: 1px solid #ddd;
+	margin: 0;	
+}
+
+div.month ul.monthdetails li.weekrow ul li {
+	position: relative;
+	text-align: center;
+	width: 29px;
+	min-height: 25px;
+	padding-top: 5px;
+	display: inline-block;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	margin: 0;
+	border-right: 1px solid transparent;
+}
+
+div.month ul.monthdetails li.weekrow ul li.middle {
+	border-right: 1px solid #ddd;
+}
+
+div.month ul.monthdetails li.weekrow ul li a {
+	text-decoration: none;
+	color: #424242;
+}
+div.month ul.monthdetails li.weekrow ul li a:hover {
+	text-decoration: underline;
+}
+
+div.month ul.monthdetails li.weekrow ul li:hover {
+	background-color: #fefdd8;
+}
+
+li.today {
+	background-color: #fefdd8;
+}
+
+li.selday {
+	background-color: #fefa43;
+}
+
+div.booked {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+}
+
+div.booked-1 { background: #faa; }
+div.booked-2 { background: #f77; }
+div.booked-3 { background: #f44; }
+div.booked-4 { background: #f11; }
+
+/* @end */
+
+
+div.clear {
+	clear: both;
+}

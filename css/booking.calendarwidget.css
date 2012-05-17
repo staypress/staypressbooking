@@ -1,0 +1,142 @@
+/* The StayPress booking widget style sheet */
+
+/* @group Calendar */
+
+div.month {
+	border: 1px solid #ddd;
+	overflow: hidden;
+	width: 90%;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: 0;
+}
+
+div.month ul {
+	margin-bottom: 0;
+}
+
+div.month h4.monthname {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom-style: none;
+	background: #ececec;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	text-align: center;
+	padding: 6px 5px;
+	overflow: hidden;
+}
+
+div.month h4.monthname span.name {
+
+}
+
+li.weekheadings {
+	display: block;
+	margin: 0;
+}
+
+li.weekheadings ul.dow {
+	width: 100%;
+	background: #efefef;
+	overflow: hidden;
+	display: block;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	min-height: 25px;
+	margin: 0 !Important;
+}
+
+li.weekheadings ul.dow li {
+	text-align: center;
+	width: 13%;
+	min-height: 15px;
+	padding-top: 3px;
+	display: inline-block;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	text-shadow: 0 1px 0 #FFFFFF;
+	margin: 0;
+	border-right: 1px solid transparent;
+	list-style: none;
+}
+
+div.month ul.monthdetails {
+	margin: 0 !Important;
+}
+
+div.month ul.monthdetails li.weekrow ul {
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+	display: block;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0 !Important;
+}
+
+div.month ul.monthdetails li.weekrow {
+	border-top: 1px solid #ddd;
+	margin: 0 auto;
+	list-style: none;
+}
+
+div.month ul.monthdetails li.weekrow ul li {
+	position: relative;
+	text-align: center;
+	width: 13%;
+	min-height: 25px;
+	padding-top: 5px;
+	display: inline-block;
+	font: normal bold 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	color: #424242;
+	margin: 0;
+	border-right: 1px solid #fff;
+	list-style: none;
+}
+
+div.month ul.monthdetails li.weekrow ul li.middle {
+	border-right: 1px solid #ddd;
+	list-style: none;
+}
+
+div.month ul.monthdetails li.weekrow ul li a {
+	text-decoration: none;
+	color: #424242;
+}
+div.month ul.monthdetails li.weekrow ul li a:hover {
+	text-decoration: underline;
+}
+
+li.today {
+	background-color: #fefdd8;
+}
+
+li.selday {
+	background-color: #fefa43;
+}
+
+li.booked {
+	background: #ff6666;
+	color: #efefef !Important;
+	text-shadow: 0 1px 0 #000000;
+}
+
+li.endday {
+	color: #424242 !Important;
+	background: #ff6666 url(../images/endday.png) no-repeat right bottom;
+	text-shadow: 0 1px 0 #fff;
+}
+
+li.startday {
+	color: #424242 !Important;
+	background: #ff6666 url(../images/startday.png) no-repeat left top;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/* @end */
