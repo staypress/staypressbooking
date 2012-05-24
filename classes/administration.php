@@ -2165,7 +2165,7 @@ class sp_bookingadmin {
 
 			echo "<div class='highlightbox'>";
 			echo "<p>";
-			echo __('<strong>Support Bite-Back</strong><br/><br/>Bite-Back is apioneering shark and marine conservation charity which is running successful campaigns to end the sale of shark fin soup in Britain.<br/><br/>','property');
+			echo __('<strong>Support Bite-Back</strong><br/><br/>Bite-Back is a pioneering shark and marine conservation charity which is running successful campaigns to end the sale of shark fin soup in Britain.<br/><br/>','property');
 			echo '<img src="' . SPPCommon::property_url('images/biteback.jpg') . '" alt="bite-back" style="margin-left: 30px;" />';
 			echo "</p>";
 
