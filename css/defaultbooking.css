@@ -1,4 +1,9 @@
-/* @override http://dev.site/wp-content/plugins/sp_booking/css/defaultbooking.css?ver=2 */
+/* @override http://solelyrentals.com/wp-content/plugins/sp_booking/css/defaultbooking.css?ver=2 */
+
+/* @override 
+	http://dev.site/wp-content/plugins/sp_booking/css/defaultbooking.css?ver=1
+	http://dev.site/wp-content/plugins/sp_booking/css/defaultbooking.css?ver=2
+*/
 
 div.wrap {
 	overflow: hidden;
@@ -25,7 +30,7 @@ div.innerwrap h2 {
 	border-top-right-radius: 6px;
 	background: #DFDFDF url(../images/gray-grad.png) repeat-x scroll left top;
 	padding: 6px 10px 6px 5px;
-	line-height: 15px;
+	line-height: 5px;
 }
 
 a.addbutton {
