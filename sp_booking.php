@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: StayPress Booking plugin
-Version: 1.3
+Version: 1.4
 Plugin URI: http://staypress.com/
 Description: The StayPress Booking management plugin
 Author: StayPress team

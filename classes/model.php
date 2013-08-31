@@ -185,7 +185,7 @@ if(!class_exists('booking_model')) {
 
 				// Build the SQL
 				if(in_array($filter['type'], array( 'all', 'in' ))) {
-					$sqlin = $this->db->prepare( "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1"  );
+					$sqlin = "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1";
 					if($specificperiod || $specificdate) {
 						$sqlin .= $this->db->prepare( " AND startdate >= %s AND startdate <= %s", $startday, $endday );
 					}
@@ -198,7 +198,7 @@ if(!class_exists('booking_model')) {
 				}
 
 				if(in_array($filter['type'], array( 'all', 'out' ))) {
-					$sqlout = $this->db->prepare( "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1" );
+					$sqlout = "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1";
 					if($specificperiod || $specificdate) {
 						$sqlout .= $this->db->prepare( " AND enddate >= %s AND enddate <= %s", $startday, $endday );
 					}
@@ -210,7 +210,7 @@ if(!class_exists('booking_model')) {
 				}
 
 				if(in_array($filter['type'], array( 'all', 'occupied' ))) {
-					$sqlocc = $this->db->prepare( "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1" );
+					$sqlocc = "SELECT SQL_CALC_FOUND_ROWS * FROM {$this->booking} WHERE 1=1";
 					if($specificperiod || $specificdate) {
 						$sqlocc .= $this->db->prepare( " AND enddate >= %s AND startdate <= %s", $startday, $endday );
 					}
@@ -645,10 +645,13 @@ if(!class_exists('booking_model')) {
 
 			if($contact_id > 0) {
 				$post['ID'] = $contact_id;
+				// update the post
+				$contact_id = wp_update_post($post);
+			} else {
+				$contact_id = wp_insert_post($post);
 			}
 
-			// update the post
-			$contact_id = wp_update_post($post);
+
 
 			if(!is_wp_error($contact_id)) {
 				update_metadata('post', $contact_id, 'contact_name', $contact['contact_name']);
