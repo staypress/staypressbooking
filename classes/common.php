@@ -9,10 +9,10 @@ class SPBCommon {
 
 		if(defined('WPMU_PLUGIN_URL') && defined('WPMU_PLUGIN_DIR') && file_exists(WPMU_PLUGIN_DIR . '/' . basename($base))) {
 			self::$SP_booking_url = trailingslashit(WPMU_PLUGIN_URL);
-		} elseif(defined('WP_PLUGIN_URL') && defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/sp_booking/' . basename($base))) {
-			self::$SP_booking_url = trailingslashit(WP_PLUGIN_URL . '/sp_booking');
+		} elseif(defined('WP_PLUGIN_URL') && defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/staypressbooking/' . basename($base))) {
+			self::$SP_booking_url = trailingslashit(WP_PLUGIN_URL . '/staypressbooking');
 		} else {
-			self::$SP_booking_url = trailingslashit(WP_PLUGIN_URL . '/sp_booking');
+			self::$SP_booking_url = trailingslashit(WP_PLUGIN_URL . '/staypressbooking');
 		}
 
 	}
@@ -22,10 +22,10 @@ class SPBCommon {
 
 		if(defined('WPMU_PLUGIN_DIR') && file_exists(WPMU_PLUGIN_DIR . '/' . basename($base))) {
 			self::$SP_booking_dir = trailingslashit(WPMU_PLUGIN_URL);
-		} elseif(defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/sp_booking/' . basename($base))) {
-			self::$SP_booking_dir = trailingslashit(WP_PLUGIN_DIR . '/sp_booking');
+		} elseif(defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/staypressbooking/' . basename($base))) {
+			self::$SP_booking_dir = trailingslashit(WP_PLUGIN_DIR . '/staypressbooking');
 		} else {
-			self::$SP_booking_dir = trailingslashit(WP_PLUGIN_DIR . '/sp_booking');
+			self::$SP_booking_dir = trailingslashit(WP_PLUGIN_DIR . '/staypressbooking');
 		}
 	}
 

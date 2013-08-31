@@ -21,11 +21,11 @@ class sp_bookingadmin {
 		if($installed_build === false) {
 			$installed_build = $this->build;
 			// Create the property class and force table creation
-			$this->booking =& new booking_model($wpdb, 0);
+			$this->booking = new booking_model($wpdb, 0);
 			SPBCommon::update_option('staypress_booking_build', $installed_build);
 		} else {
 			// Create the property class and send through installed build version
-			$this->booking =& new booking_model($wpdb, $installed_build);
+			$this->booking = new booking_model($wpdb, $installed_build);
 		}
 
 		$tz = get_option('gmt_offset');
@@ -349,7 +349,8 @@ class sp_bookingadmin {
 		// Add the menu page
 		add_menu_page(__('Booking Management','booking'), __('Bookings','booking'), 'edit_booking',  'booking', array(&$this,'handle_booking_panel'), SPBCommon::booking_url('images/calendar.png'));
 		// Move things about
-		$menuaddedat = end(array_keys($menu));
+		$keys = array_keys($menu);
+		$menuaddedat = end( $keys );
 
 		$checkfrom = $_wp_last_object_menu + 1;
 		while(isset($menu[$checkfrom])) {
@@ -515,7 +516,7 @@ class sp_bookingadmin {
 							$booking['starttime'] = date("H:i", mktime((int) $_POST['startdate-hour'], (int) $_POST['startdate-min']));
 							$booking['endtime'] = date("H:i", mktime((int) $_POST['enddate-hour'], (int) $_POST['enddate-min']));
 
-							$booking['notes'] = $_POST['notes'];
+							$booking['notes'] = (isset($_POST['notes']) ? $_POST['notes'] : '');
 
 							$booking['property_id'] = $_POST['property_id'];
 							// An insert so set the defaults
@@ -710,7 +711,7 @@ class sp_bookingadmin {
 								$booking['starttime'] = date("H:i", mktime((int) $_POST['startdate-hour'], (int) $_POST['startdate-min']));
 								$booking['endtime'] = date("H:i", mktime((int) $_POST['enddate-hour'], (int) $_POST['enddate-min']));
 
-								$booking['notes'] = $_POST['notes'];
+								$booking['notes'] = (isset($_POST['notes']) ? $_POST['notes'] : '' );
 
 								$booking['property_id'] = $_POST['property_id'];
 
@@ -1098,6 +1099,8 @@ class sp_bookingadmin {
 		$day = strftime('%a', $highlightdate);
 		if(strlen($day) >= 4) {
 			$dayclass = ' smaller';
+		} else {
+			$dayclass = ' ';
 		}
 		echo "<span class='dayofweek" . $dayclass . "'>" . $day . "</span>";
 		echo "<span class='day'>" . strftime('%d', $highlightdate) . "</span>";
@@ -1406,7 +1409,7 @@ class sp_bookingadmin {
 		wp_nonce_field('update-booking-' . $booking->id);
 
 		echo "<label for='title' class='main'>" . __('Title', 'booking') . "</label>";
-		echo "<input type='text' name='title' id='title' value='" . esc_attr(stripslashes($booking->title)) . "' class='main wide' />";
+		echo "<input type='text' name='title' id='title' value='" . esc_attr(stripslashes( (isset($booking->title) ? $booking->title : '' ))) . "' class='main wide' />";
 
 		// Build property drop down list
 		echo "<label for='property_id' class='main'>" . __('Property', 'booking') . "</label>";
@@ -1419,7 +1422,7 @@ class sp_bookingadmin {
 				echo "<option value=''>" . __('Select a property from the list','booking') . "</option>";
 				foreach($properties as $key => $property) {
 					echo "<option value='" . $property->ID . "'";
-					if($booking->property_id == $property->ID) {
+					if(isset($booking->property_id) && $booking->property_id == $property->ID) {
 						echo " selected='selected'";
 						$inlist = true;
 					}
@@ -1504,7 +1507,7 @@ class sp_bookingadmin {
 		echo "<input type='text' name='startdate' id='startdate' value='" . esc_attr(date("Y-n-j", $startdate)) . "' class='hiddendatefield' />";
 
 		// Times drop downs
-		$starttime = strtotime($booking->starttime);
+		$starttime = strtotime( (isset($booking->starttime) ? $booking->starttime : 'now' ) );
 		echo "<select name='startdate-hour' id='startdate-hour' class='lefttimefield timefield'>";
 		for($n=0; $n <=23; $n++) {
 			echo "<option value='" . str_pad($n, 2, '0', STR_PAD_LEFT) . "'";
@@ -1549,7 +1552,7 @@ class sp_bookingadmin {
 		echo "<input type='text' name='enddate' id='enddate' value='" . esc_attr(date("Y-n-j", $enddate)) . "' class='hiddendatefield' />";
 
 		// Times drop downs
-		$endtime = strtotime($booking->endtime);
+		$endtime = strtotime( (isset($booking->endtime) ? $booking->endtime : 'now' ) );
 		echo "<select name='enddate-hour' id='enddate-hour' class='lefttimefield timefield'>";
 		for($n=0; $n <=23; $n++) {
 			echo "<option value='" . str_pad($n, 2, '0', STR_PAD_LEFT) . "'";
@@ -1582,10 +1585,10 @@ class sp_bookingadmin {
 		echo "<h3>" . __('Main Contact Details','booking') . "</h3>";
 		echo "<p>" . __('Enter the details of the main contact person for this booking.','booking') . "</p>";
 
-		echo "<input type='hidden' id='contact_id' name='contact_id' value='" . $contact->ID . "' />";
+		echo "<input type='hidden' id='contact_id' name='contact_id' value='" . (isset($contact->ID) ? $contact->ID : '') . "' />";
 
 		echo "<label for='contact_name' class='main'>" . __('Name', 'booking') . "</label>";
-		echo "<input type='text' name='contact_name' id='contact_name' value='" . esc_attr(stripslashes($contact->post_title)) . "' class='main narrow' />";
+		echo "<input type='text' name='contact_name' id='contact_name' value='" . esc_attr(stripslashes( (isset($contact->post_title) ? $contact->post_title : '' ))) . "' class='main narrow' />";
 
 		if(!empty($contact->ID)) {
 			$contactmetadata = get_post_custom($contact->ID);
@@ -1780,54 +1783,56 @@ class sp_bookingadmin {
 			}
 
 			echo "<table class='widefat'>";
-			foreach( (array) $notes as $key => $note) {
-				echo "<tr class='bookingnote bookingnote" . $note->note_type . "'>";
-				switch($note->note_type) {
-						case 'payment':
-											echo "<th>";
-											echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
-											echo "</th>";
-											echo "<td colspan='2'>";
-												echo "<h6>" . __('Payment made of : ', 'booking');
-												$meta = unserialize($note->note_meta);
-												echo strtoupper($meta['currency']) . " " . number_format($meta['amount'], 2);
-												echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
-												echo "</h6>";
+			if(!empty($notes)) {
+				foreach( (array) $notes as $key => $note) {
+					echo "<tr class='bookingnote bookingnote" . $note->note_type . "'>";
+					switch($note->note_type) {
+							case 'payment':
+												echo "<th>";
+												echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
+												echo "</th>";
+												echo "<td colspan='2'>";
+													echo "<h6>" . __('Payment made of : ', 'booking');
+													$meta = unserialize($note->note_meta);
+													echo strtoupper($meta['currency']) . " " . number_format($meta['amount'], 2);
+													echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
+													echo "</h6>";
 
-												echo "<p>" . $note->note . "</p>";
-											echo "</td>";
-											break;
+													echo "<p>" . $note->note . "</p>";
+												echo "</td>";
+												break;
 
-						case 'reminder':
-											echo "<th>";
-											echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
-											echo "</th>";
-											echo "<td colspan='2'>";
-												echo "<h6>" . __('Reminder made by : ', 'booking');
-												$user = get_userdata( $note->user_id );
-												echo $user->user_nicename;
-												echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
-												echo "</h6>";
+							case 'reminder':
+												echo "<th>";
+												echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
+												echo "</th>";
+												echo "<td colspan='2'>";
+													echo "<h6>" . __('Reminder made by : ', 'booking');
+													$user = get_userdata( $note->user_id );
+													echo $user->user_nicename;
+													echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
+													echo "</h6>";
 
-											echo "</td>";
-											break;
+												echo "</td>";
+												break;
 
-						case 'note':
-											echo "<th>";
-											echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
-											echo "</th>";
-											echo "<td colspan='2'>";
-												echo "<h6>" . __('Note made by : ', 'booking');
-												$user = get_userdata( $note->user_id );
-												echo $user->user_nicename;
-												echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
-												echo "</h6>";
+							case 'note':
+												echo "<th>";
+												echo "<input type='checkbox' name='bookingnoteid[]' value='" . $note->id . "' />";
+												echo "</th>";
+												echo "<td colspan='2'>";
+													echo "<h6>" . __('Note made by : ', 'booking');
+													$user = get_userdata( $note->user_id );
+													echo $user->user_nicename;
+													echo "<span>" . __(' on ', 'booking') . date("jS M Y", strtotime( $note->created_date )) . __(' at ', 'booking') . date("H:i", strtotime( $note->created_date )) . "</span>";
+													echo "</h6>";
 
-												echo "<p>" . $note->note . "</p>";
-											echo "</td>";
-											break;
+													echo "<p>" . $note->note . "</p>";
+												echo "</td>";
+												break;
+					}
+					echo "</tr>";
 				}
-				echo "</tr>";
 			}
 
 			// The add notes / payments panel
@@ -2112,7 +2117,7 @@ class sp_bookingadmin {
 			echo "<option value=''>" . __('Select a property from the list','booking') . "</option>";
 			foreach($properties as $key => $property) {
 				echo "<option value='" . $property->ID . "'";
-				if((int) $_GET['property_id'] == $property->ID) {
+				if( isset($_GET['property_id']) && (int) $_GET['property_id'] == $property->ID) {
 					echo " selected='selected'";
 				}
 				echo ">";
@@ -2159,7 +2164,7 @@ class sp_bookingadmin {
 
 			echo "<div class='highlightbox blue'>";
 			echo "<p>";
-			echo __('We don\'t take donations here at <strong>StayPress</strong>. Instead, we pick a charity every month and ask you to donate directly to them if you feel the urge to give.','property');
+			echo __('We don\'t take donations here. Instead, we pick a charity every month and ask you to donate directly to them if you feel the urge to give.','property');
 			echo "</p>";
 			echo "</div>";
 
