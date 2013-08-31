@@ -645,10 +645,13 @@ if(!class_exists('booking_model')) {
 
 			if($contact_id > 0) {
 				$post['ID'] = $contact_id;
+				// update the post
+				$contact_id = wp_update_post($post);
+			} else {
+				$contact_id = wp_insert_post($post);
 			}
 
-			// update the post
-			$contact_id = wp_update_post($post);
+
 
 			if(!is_wp_error($contact_id)) {
 				update_metadata('post', $contact_id, 'contact_name', $contact['contact_name']);
