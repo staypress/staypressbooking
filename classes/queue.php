@@ -39,7 +39,7 @@ if(!class_exists('SPQueue')) {
 
 		}
 
-		function insertonduplicate($table, $data) {
+		private static function insertonduplicate($table, $data) {
 
 			global $wpdb;
 
