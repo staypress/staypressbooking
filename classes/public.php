@@ -23,11 +23,11 @@ class sp_booking {
 		if($installed_build === false) {
 			$installed_build = $this->build;
 			// Create the property class and force table creation
-			$this->booking =& new booking_model($wpdb, 0);
+			$this->booking = new booking_model($wpdb, 0);
 			SPBCommon::update_option('staypress_booking_build', $installed_build);
 		} else {
 			// Create the property class and send through installed build version
-			$this->booking =& new booking_model($wpdb, $installed_build);
+			$this->booking = new booking_model($wpdb, $installed_build);
 		}
 
 		$tz = get_option('gmt_offset');
